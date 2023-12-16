@@ -33,7 +33,7 @@ def profile(request):
 def confirm_logout(request):
     return render(request, 'customers/confirm_logout.html')
 
-login_required
+@login_required
 def transfer(request):
     if request.method == 'POST':
         form = TransferForm(request.POST)
