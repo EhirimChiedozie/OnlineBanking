@@ -26,4 +26,6 @@ urlpatterns = [
     path('login/', auth_views.LoginView.as_view(template_name='customers/login.html'), name='customers_login'),
     path('logout/', auth_views.LogoutView.as_view(template_name='customers/logout.html'), name='customers_logout'),
     path('profile', customer_views.profile, name='customers_profile'),
+    path('confirm_logout/', customer_views.confirm_logout, name='confirm_logout'),
+    path('transfer/', customer_views.transfer, name='transfer'),
 ]

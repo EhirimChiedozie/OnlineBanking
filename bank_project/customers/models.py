@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin, BaseUserManager
+from django.utils import timezone
 # Create your models here.
 
 class CustomerManager(BaseUserManager):
@@ -40,7 +41,7 @@ class Customer(AbstractBaseUser, PermissionsMixin):
     last_name = models.CharField(max_length=100)
     phonenumber = models.CharField(unique=True, max_length=100)
     account_number = models.CharField(max_length=20)
-    account_balance = models.IntegerField(default=0)
+    account_balance = models.FloatField(default=0)
     is_staff = models.BooleanField(default=True)
     is_active = models.BooleanField(default=True)
     is_superuser = models.BooleanField(default=True)
@@ -53,3 +54,11 @@ class Customer(AbstractBaseUser, PermissionsMixin):
     class Meta:
         verbose_name = 'Customer'
         verbose_name_plural = 'Customers'
+
+class Transfers(models.Model):
+    sender = models.ForeignKey(Customer, on_delete=models.CASCADE)
+    receiver_account = models.CharField(max_length=20)
+    amount = models.CharField(max_length=20)
+    date = models.DateTimeField(default=timezone.now)
+    def __repr__(self):
+        return f'''{self.receiver_account}, {self.amount}, {self.date}, {self.sender}'''

@@ -1,12 +1,12 @@
 
 body {
-    background: steelblue;
+    background: #fafafa;
     color:#333333ab;
     margin-top:5rem;
 }
 
 .bg-steel{
-    background-color: blue;
+    background-color: black;
 }
 
 .site-header .navbar-nav .nav-link {
@@ -114,3 +114,41 @@ button{
     color: blueviolet;
 }
 
+.jumbotron{
+    background-color:yellowgreen;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.container .transaction_types{
+    background-color: burlywood;
+}
+
+.trans-type{
+    border: 1px solid black;
+    margin: 1rem;
+    padding: 2rem 2rem;
+    background-color: white;
+    text-align: center;
+}
+ 
+.transaction{
+    display: inline-block;
+    border: 1px solid darkorchid;
+    padding: 1rem 1rem;
+    vertical-align: middle;
+}
+
+.transfer:hover{
+    color: violet;
+    font-size: 40px;
+}
+
+.balance:hover{
+    color: violet;
+    font-size: 40px;
+}
+
+.airtime-purchase:hover{
+    color:violet;
+    font-size: 40px;
+}

@@ -130,6 +130,6 @@ AUTH_USER_MODEL = 'customers.Customer'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
-LOGIN_REDIRECT_URL = 'bankapp_home'
+LOGIN_REDIRECT_URL = 'customers_profile'
 
 LOGIN_URL = 'login/'
