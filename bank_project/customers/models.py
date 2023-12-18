@@ -55,10 +55,10 @@ class Customer(AbstractBaseUser, PermissionsMixin):
         verbose_name = 'Customer'
         verbose_name_plural = 'Customers'
 
-class Transfers(models.Model):
+class Transfer(models.Model):
     sender = models.ForeignKey(Customer, on_delete=models.CASCADE)
     receiver_account = models.CharField(max_length=20)
-    amount = models.CharField(max_length=20)
+    amount = models.IntegerField()
     date = models.DateTimeField(default=timezone.now)
     def __repr__(self):
-        return f'''{self.receiver_account}, {self.amount}, {self.date}, {self.sender}'''
+        return f'''{self.sender}, {self.amount}, {self.date}'''

@@ -28,4 +28,5 @@ urlpatterns = [
     path('profile', customer_views.profile, name='customers_profile'),
     path('confirm_logout/', customer_views.confirm_logout, name='confirm_logout'),
     path('transfer/', customer_views.transfer, name='transfer'),
+    path('statement/', customer_views.statement, name='statement')
 ]

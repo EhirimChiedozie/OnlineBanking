@@ -1,9 +1,10 @@
 from django.shortcuts import render, redirect
 from .forms import AccountOpeningForm, TransferForm
-from .models import Customer, Transfers
+from .models import Customer, Transfer
 from django.contrib.auth import hashers
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+import csv
 # Create your views here.
 
 def open_account(request):
@@ -46,13 +47,15 @@ def transfer(request):
                 if receiver.account_number == sender.account_number:
                     messages.error(request, 'You cannot transfer to yourself')
                 else:
-                    if receiver.account_balance <= amount:
+                    if sender.account_balance <= amount:
                         messages.warning(request, 'Insufficient funds')
                     else:
                         sender.account_balance -= amount
                         receiver.account_balance += amount
                         sender.save()
                         receiver.save()
+                        transfer = Transfer(sender=request.user, receiver_account=receiver, amount=amount)
+                        transfer.save()
                         messages.success(request, f"Transfer to {receiver.first_name} {receiver.last_name} was successful")
                         return redirect('bankapp_home')
             else:
@@ -61,3 +64,13 @@ def transfer(request):
         form = TransferForm()
     context = {'form':form}
     return render(request, 'customers/transfer.html', context=context)
+
+@login_required
+def statement(request):
+    credit_table = Transfer.objects.filter(receiver_account=request.user.email).all()
+    debit_table = Transfer.objects.filter(sender_id=request.user.id).all()
+    context = {
+        'credit_table' : credit_table,
+        'debit_table' : debit_table
+    }
+    return render(request, 'customers/statement.html', context)

@@ -1,5 +1,5 @@
 from django.contrib.auth.forms import UserCreationForm
-from .models import Customer, Transfers
+from .models import Customer, Transfer
 from django import forms
 
 class AccountOpeningForm(UserCreationForm):
@@ -10,5 +10,5 @@ class AccountOpeningForm(UserCreationForm):
 
 class TransferForm(forms.ModelForm):
     class Meta:
-        model = Transfers
+        model = Transfer
         fields = ['receiver_account', 'amount']

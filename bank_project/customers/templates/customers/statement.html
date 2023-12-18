@@ -1,0 +1,35 @@
+{% extends 'bankapp/base.html' %}
+{% block content %}
+    <table border=1>
+        <caption>Debit Table</caption>
+        <tr>
+            <th>Sender</th>
+            <th>Amount</th>
+            <th>Date</th>
+        </tr>
+        {% for credit in credit_table %}
+            <tr>
+                <td>{{credit.sender}}</td>
+                <td>{{credit.amount}}</td>
+                <td>{{credit.date}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    <br>
+
+    <table border=1>
+        <caption>Credit Table</caption>
+        <tr>
+            <th>Receiver</th>
+            <th>Amount</th>
+            <th>Date</th>
+        </tr>
+        {% for debit in debit_table %}
+            <tr>
+                <td>{{debit.receiver_account}}</td>
+                <td>{{debit.amount}}</td>
+                <td>{{debit.date}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock content %}
