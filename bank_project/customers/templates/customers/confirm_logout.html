@@ -1,0 +1,10 @@
+{% extends 'bankapp/base.html' %}
+{% block content %}
+<div class="jumbotron">
+    <h3>Are you sure you want to logout?</h3>
+    <div>
+        <span><a href="{% url 'customers_logout' %}">Yes</a></span>
+        <span><a href="{% url 'customers_profile' %}">No</a></span>
+    </div>
+</div>
+{% endblock content %}

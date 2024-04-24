@@ -1,0 +1,22 @@
+{% extends 'bankapp/base.html' %}
+{% block content %}
+    <div class="jumbotron">
+        <div class="welcome">
+            <h1 class="welcome-text">Welcome {{user.first_name}}</h1>
+        </div>
+        <div class="account-balance">
+            <h1 class="account-balance-text">Your balance is N{{ user.account_balance }}</h1>
+        </div>
+    </div>
+    <div class="trans-type">
+        <div id="Transfer" class="jumbotron transaction">
+            <a href="{% url 'make_transfer_request' %}" class="transfer"><h3>Transfer</a>
+        </div>
+        <div id="CheckBalance" class="jumbotron transaction">
+            <a href="{% url 'statement' %}"><h3>Statement</h3></a>
+        </div>
+        <div id="Airtime" class="jumbotron transaction">
+            <a href="#" class="airtime-purchase">Airtime</a>
+        </div>
+    </div>
+{% endblock content %}

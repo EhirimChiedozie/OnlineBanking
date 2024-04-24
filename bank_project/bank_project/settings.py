@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-o^=b**b_*3ol2u26gf-e(#jr4=!3)-x&gut4x@$nn)@s!0j@by'
+SECRET_KEY = 'django-insecure-jisxvfcq+8@929cy^e*@a!yo8fl4pmw-94hph7-&@v1l$+wi71'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -31,8 +31,9 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'bankapp.apps.BankappConfig',
     'django.contrib.admin',
+    'bankapp.apps.BankappConfig',
+    'customers.apps.CustomersConfig',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -124,3 +125,5 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+AUTH_USER_MODEL = 'customers.Customer'

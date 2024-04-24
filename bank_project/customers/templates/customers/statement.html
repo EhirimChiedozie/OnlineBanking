@@ -1,0 +1,24 @@
+{% extends  'bankapp/base.html' %}
+{% block content %}
+    <br><br><br><br><br><br><br>
+    <h1>Statement of Account</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Sender</th>
+                <th>ReceiverAccount</th>
+                <th>Amount</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        {% for transfer in transfers %}
+            <tr>
+                <td>{{ transfer.user.email }}</td>
+                <td>{{ transfer.receiver_account }}</td>
+                <td>{{ transfer.amount }}</td>
+                <td>{{ transfer.date }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+{% endblock content %}
