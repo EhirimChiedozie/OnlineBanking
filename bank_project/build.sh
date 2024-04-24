@@ -4,5 +4,5 @@
 
 set -o errexit
 pip install -r bank_project/requirements.txt
-python manage.py collectstatic --no-input
-python manage.py migrate
+python bank_project/manage.py collectstatic --no-input
+python bank_project/manage.py migrate
