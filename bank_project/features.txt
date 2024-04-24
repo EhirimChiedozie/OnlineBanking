@@ -1,0 +1,48 @@
+FEATURES OF AN ONLINE BANKING SYSTEM
+
+An online banking system typically offers a range of features and functionalities that 
+allow users to conveniently and securely manage their finances through the internet. 
+Here are some common features found in online banking systems:
+
+Account Management:
+Account Overview: Users can view summaries of their account balances, recent transactions, and account details.
+Transaction History: Access to detailed transaction histories, including deposits, withdrawals, transfers, and payments.
+Statement Download: Ability to download bank statements in various formats (PDF, CSV, etc.).
+Account Statements: View and download monthly or periodic account statements.
+
+Funds Transfer and Payments:
+Internal Transfers: Transfer funds between the user's own accounts (e.g., checking, savings, investment).
+External Transfers: Transfer funds to other accounts within the same bank or to accounts in other 
+financial institutions.
+Bill Payments: Set up, schedule, and make payments for utility bills, loans, credit cards, and other services.
+
+Alerts and Notifications:
+Transaction Alerts: Receive alerts for specific transactions or when the account balance reaches a certain threshold.
+Payment Reminders: Notifications for upcoming bill due dates or recurring payments.
+Security Alerts: Alerts for suspicious activities or changes in account settings.
+
+Account Management Tools:
+Account Preferences: Customize account settings, notifications, and preferences.
+Profile Management: Update personal information, contact details, and password changes.
+Account Statements: Access to e-statements, tax statements, and other financial documents.
+
+Security and Authentication:
+Multi-factor Authentication (MFA): Secure login using multiple authentication 
+methods (e.g., password, SMS code, biometrics).
+Encryption: Data encryption to protect sensitive information transmitted over the internet.
+Session Management: Automatic logout after periods of inactivity to prevent unauthorized access.
+Security Alerts: Notifying users about any unusual account activity or login attempts.
+
+Customer Support and Services:
+Help Center/FAQs: Access to FAQs, tutorials, and guides for using the online banking platform.
+Customer Service: Contact options for customer support, such as live chat, email, or phone support.
+Branch and ATM Locator: Find nearby branches and ATMs with location-based services.
+
+Mobile Banking Integration:
+Mobile App Access: Seamless access to banking services through dedicated mobile apps with similar functionalities.
+Mobile Check Deposits: Ability to deposit checks by capturing images through the mobile app.
+
+Push Notifications: Receive transaction alerts and updates directly on the mobile device.
+These features contribute to providing users with a comprehensive and convenient online banking experience 
+while prioritizing security and ease of use. 
+The specific features may vary based on the banking institution and the online banking platform they offer.
