@@ -33,8 +33,8 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'django.contrib.admin',
-    'bankapp.apps.BankappConfig',
-    'customers.apps.CustomersConfig',
+    'bank_project.bankapp.apps.BankappConfig',
+    'bank_project.customers.apps.CustomersConfig',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
