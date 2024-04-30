@@ -27,7 +27,7 @@ urlpatterns = [
     path('profile', customer_views.profile, name='customers_profile'),
     path('confirm_logout/', customer_views.confirm_logout, name='confirm_logout'),
     path('make_transfer_request/', customer_views.make_transfer_request, name='make_transfer_request'),
-    path('confirm_transfer_details/', customer_views.confirm_transfer_details, name='confirm_transfer_details'),
+    # path('confirm_transfer_details/', customer_views.confirm_transfer_details, name='confirm_transfer_details'),
     path('execute_transfer/', customer_views.execute_transfer, name='execute_transfer'),
     path('password_reset/', auth_views.PasswordResetView.as_view(template_name='customers/password_reset.html'), name='password_reset'),
     path('password_reset_confirm/<uidb64><token>/', auth_views.PasswordResetConfirmView.as_view(template_name='customers/password_reset_confirm.html'), name='password_reset_confirm'),
