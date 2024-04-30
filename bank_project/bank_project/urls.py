@@ -20,7 +20,7 @@ from django.contrib.auth import views as auth_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('bank_project.bankapp.urls') ),
+    path('', include('bankapp.urls') ),
     path('open_account/', customer_views.open_account, name='open_account'),
     path('login/', auth_views.LoginView.as_view(template_name='customers/login.html'), name='customers_login'),
     path('logout/', auth_views.LogoutView.as_view(template_name='customers/logout.html'), name='customers_logout'),
