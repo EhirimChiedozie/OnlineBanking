@@ -126,3 +126,5 @@ class CustomerStatementView(ListView, LoginRequiredMixin):
 
     def get_queryset(self):
         return Transfer.objects.filter(Q(user=self.request.user) | Q(receiver_account=self.request.user.email)).order_by('-date')
+    
+
